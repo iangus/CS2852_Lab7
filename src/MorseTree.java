@@ -36,7 +36,7 @@ public class MorseTree<E> {
      * Constructor that creates a new MorseTree with an empty root
      */
     public MorseTree(){
-        root = new Node<E>(null);
+        root = new Node<>(null);
     }
 
     /**
@@ -50,12 +50,12 @@ public class MorseTree<E> {
             char character = morsePattern.charAt(i);
             if(character == '-'){
                 if(subroot.rKid == null){
-                    subroot.rKid = new Node(null);
+                    subroot.rKid = new Node<>(null);
                 }
                 subroot = subroot.rKid;
             } else if(character == '.'){
                 if(subroot.lKid == null){
-                    subroot.lKid = new Node(null);
+                    subroot.lKid = new Node<>(null);
                 }
                 subroot = subroot.lKid;
             }

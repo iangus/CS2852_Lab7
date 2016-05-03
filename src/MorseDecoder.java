@@ -1,3 +1,11 @@
+/*
+ * CS2852 - 041
+ * Spring 2016
+ * Lab
+ * Name: Ian Guswiler
+ * Created: 4/26/2016
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -5,11 +13,10 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * CS2852 - 041
- * Spring 2016
- * Lab
- * Name: Ian Guswiler
- * Created: 4/26/2016
+ * Loads encoded files and operates on them using a given morse code tree then saves the decoded message to a file.
+ *
+ * @author Ian Guswiler
+ * @version 5/2/16
  */
 public class MorseDecoder {
     private static MorseTree tree = new MorseTree();
@@ -24,6 +31,10 @@ public class MorseDecoder {
         }
     }
 
+    /**
+     * Main functioning of the program. Utilizes scanners to receive system and file inputs
+     * @param args Ignored
+     */
     public static void main(String[] args) {
         loadDecoder(new File("morsecode.txt"));
         Scanner input = new Scanner(System.in);
